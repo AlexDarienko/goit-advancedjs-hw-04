@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixabay Image Search</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" crossorigin src="/goit-advancedjs-hw-04/index.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-04/assets/vendor-BfjKTZs6.js">
+  <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-04/assets/vendor-CX4EDM7x.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Пошук зображень Pixabay</h1>
+    <form class="form" id="search-form">
+      <input type="text" id="search-input" placeholder="Введіть запит..." required>
+      <button type="submit">Шукати</button>
+    </form>
+  </header>
+
+  <span class="loader" hidden>🔄 Завантаження...</span>
+
+  <main>
+    <ul class="gallery"></ul>
+  </main>
+
+
+</body>
+
+</html>
