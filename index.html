@@ -9,7 +9,7 @@
   <script type="module" crossorigin src="/goit-advancedjs-hw-04/index.js"></script>
   <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-04/assets/vendor-BfjKTZs6.js">
   <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-04/assets/vendor-CX4EDM7x.css">
-  <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-04/assets/index-d38y53gF.css">
+  <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-04/assets/index-SmYhfzWM.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
   <header>
     <h1>Пошук зображень Pixabay</h1>
     <form class="form" id="search-form">
-      <input type="text" id="search-input" placeholder="Введіть запит..." required>
+      <input type="text" id="search-input" name="searchQuery" placeholder="Введіть запит..." required>
       <button type="submit">Шукати</button>
     </form>
   </header>
@@ -26,6 +26,7 @@
 
   <main>
     <ul class="gallery"></ul>
+    <button class="load-more" style="display: none;">Load more</button>
   </main>
 
 
