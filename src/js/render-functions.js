@@ -5,25 +5,29 @@ export function createMarkup(images) {
   return images
     .map(
       ({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `
-      <div class="photo-card">
-        <a href="${largeImageURL}">
-          <img src="${webformatURL}" alt="${tags}" loading="lazy"/>
-        </a>
+      <a class="gallery-item" href="${largeImageURL}">
+        <img src="${webformatURL}" alt="${tags}" loading="lazy"/>
         <div class="info">
           <p><b>Likes:</b> ${likes}</p>
           <p><b>Views:</b> ${views}</p>
           <p><b>Comments:</b> ${comments}</p>
           <p><b>Downloads:</b> ${downloads}</p>
         </div>
-      </div>`
+      </a>`
     )
     .join('');
 }
 
-export function updateGallery(markup) {
-  const gallery = document.querySelector('.gallery');
-  gallery.insertAdjacentHTML('beforeend', markup);
-
-  const lightbox = new SimpleLightbox('.gallery a');
+export function updateGallery(container, images) {
+  container.insertAdjacentHTML('beforeend', createMarkup(images));
   lightbox.refresh();
 }
+
+export function clearGallery(container) {
+  container.innerHTML = '';
+}
+
+export const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});

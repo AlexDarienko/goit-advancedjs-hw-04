@@ -13,7 +13,7 @@
   <header>
     <h1>Пошук зображень Pixabay</h1>
     <form class="form" id="search-form">
-      <input type="text" id="search-input" placeholder="Введіть запит..." required>
+      <input type="text" id="search-input" name="searchQuery" placeholder="Введіть запит..." required>
       <button type="submit">Шукати</button>
     </form>
   </header>
@@ -22,6 +22,7 @@
 
   <main>
     <ul class="gallery"></ul>
+    <button class="load-more" style="display: none;">Load more</button>
   </main>
 
   <script type="module" src="./main.js"></script>
